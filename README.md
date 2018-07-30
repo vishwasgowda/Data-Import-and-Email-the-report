@@ -32,7 +32,7 @@ def sendHtmlMail(df_html):
      #add in the message body
       msg.attach(MIMEText(message, 'plain'))
       msg.attach(MIMEText(df_html, 'html')) 
-      server = smtplib.SMTP('fc8smtp')
+      server = smtplib.SMTP('')
       toaddrs = [email_to]
       server.sendmail(email_from, email_to, msg.as_string())
       server.quit()
